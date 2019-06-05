@@ -28,12 +28,13 @@ if (typeof(Storage) !== "undefined") {
   // saves the given parameter at the end of the localStorage tag string
 
   function deleteTag(tagNumber) {
-
-    saveTags();
+    currentTags = loadTags();
+    currentTags.splice(tagNumber, 1);
+    saveTags(currentTags);
   }
 
   function showTags() {
-
+    document.getElementById("tagView").innerHTML = currentTags;
   }
 
 } else {
