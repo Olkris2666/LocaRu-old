@@ -33,6 +33,13 @@ if (typeof(Storage) !== "undefined") {
     saveTags(currentTags);
   }
 
+  function deleteAllTags() {
+    localStorage.removeItem("tags");
+    currentTags = loadTags()
+    showTags()
+  }
+
+
   function showTags() {
     document.getElementById("tagView").innerHTML = currentTags;
   }
