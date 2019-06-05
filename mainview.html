@@ -1,22 +1,24 @@
 <html>
 <head>
+	<title>LocaRu</title>
+	<meta name="theme-color" content="#299e40"/>
 	<script src="taglogic.js"></script>
 	<link rel="stylesheet" href="styling.css"/>
-	<meta name="theme-color" content="#299e40"/>
-	<title>LocaRu</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		Ight
+		<h1>LocaRu</h1>
 	</header>
 	<div align="center">
 		<iframe src="pictureview/viewer.html"></iframe>
 		<p>
 			<button onclick="addTag(prompt('Enter the tag'))">Add a tag</button>
+			<button onclick="showTags()">Show tags!</button>
 		</p>
 	</div>
-	<div id="tagsSection">
-		
+	<div id="tagView">
+		<!-- will fill in with save tags automatically-->
 	</div>
 </body>
 </html>
