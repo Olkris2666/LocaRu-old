@@ -27,3 +27,16 @@ h1 {
   margin-block-end: 0em;
 }
 /* removes the padding for h1 by user agent */
+
+#actionButtons {
+  margin: 1em;
+}
+
+#tagView {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+.center {
+  text-align: center;
+}
