@@ -1,6 +1,11 @@
 if (typeof(Storage) !== "undefined") {
-// executes page code only if web storage features are supported
+  // executes page code only if web storage features are supported
 
+  function PageOnLoad() {
+      loadTags()
+      showTags()
+  }
+  
   function saveTags(currentTags) {
     localStorage.setItem("tags", currentTags.join(","));
   }
