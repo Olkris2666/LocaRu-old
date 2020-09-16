@@ -1,6 +1,6 @@
 if (typeof(Storage) !== "undefined") {
-// executes page code only if web storage features are supported
-
+  // executes page code only if web storage features are supported
+  
   function saveTags(currentTags) {
     localStorage.setItem("tags", currentTags.join(","));
   }
@@ -27,12 +27,14 @@ if (typeof(Storage) !== "undefined") {
   }
   // saves the given parameter at the end of the localStorage tag string
 
+  // Deletes a tag in the tags array
   function deleteTag(tagNumber) {
     currentTags = loadTags();
     currentTags.splice(tagNumber, 1);
     saveTags(currentTags);
   }
 
+  // Clears all the tags in the array
   function deleteAllTags() {
     localStorage.removeItem("tags");
     currentTags = loadTags()
@@ -40,8 +42,16 @@ if (typeof(Storage) !== "undefined") {
   }
 
 
+  // Display the tags on the page
   function showTags() {
     document.getElementById("tagView").innerHTML = currentTags;
+  }
+  
+  // On load function that loads the tags from local storage then displays them
+  function PageOnLoad() {
+      currentTags = loadTags()
+      saveTags(currentTags)
+      showTags()
   }
 
 } else {
